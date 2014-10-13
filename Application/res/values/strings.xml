@@ -4,5 +4,10 @@
     <string name="app_name">RideWithMe</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="logo">Logo</string>
+    <string name="user">Потребител</string>
+    <string name="password">Парола</string>
+    <string name="submit_btn">Вход</string>
+    <string name="footer">Team MickeyMouse</string>
 
 </resources>

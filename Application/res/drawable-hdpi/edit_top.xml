@@ -2,12 +2,12 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle" >
    <solid
-        android:color="#FFFFFF" >
+        android:color="#B5D6F4" >
     </solid>
 
     <stroke
         android:width="2dp"
-        android:color="#061bb5" >
+        android:color="#4F8FBB" >
     </stroke>
 
     <padding
