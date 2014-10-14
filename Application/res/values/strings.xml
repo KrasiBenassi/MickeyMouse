@@ -9,5 +9,10 @@
     <string name="password">Парола</string>
     <string name="submit_btn">Вход</string>
     <string name="footer">Team MickeyMouse</string>
+    <string name="reg_user">Потребителско име</string>
+    <string name="reg_pass">Парола</string>
+    <string name="reg_confPass">Повтори парола</string>
+    <string name="reg_email">Email</string>
+    <string name="reg_btn">Регистрирай се</string>
 
 </resources>
