@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/gradient_demo"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="horizontal"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="15dp" >
+
+        <LinearLayout
+            android:id="@+id/picLa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/profile_pic"
+                android:src="@android:drawable/ic_menu_camera" />
+
+            <EditText
+                android:id="@+id/profName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edit_top"
+                android:ems="10"
+                android:hint="@string/name"
+                android:padding="10dp"
+                android:textColorHint="#0A5688" />
+        </LinearLayout>
+        
+         <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_top"
+            android:text="@string/search_btn"
+            android:textColor="#0A5688" />
+         
+          <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_top"
+            android:text="@string/create_btn"
+            android:textColor="#0A5688" />
+
+        <EditText
+            android:id="@+id/profEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_top"
+            android:ems="10"
+            android:hint="@string/reg_email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColorHint="#0A5688" />
+
+        <EditText
+            android:id="@+id/EditText03"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_top"
+            android:ems="10"
+            android:hint="@string/user"
+            android:padding="10dp"
+            android:textColorHint="#0A5688" />
+    </LinearLayout>
+
+</ScrollView>

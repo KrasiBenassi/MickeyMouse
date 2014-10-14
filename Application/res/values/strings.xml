@@ -14,5 +14,9 @@
     <string name="reg_confPass">Повтори парола</string>
     <string name="reg_email">Email</string>
     <string name="reg_btn">Регистрирай се</string>
+    <string name="profile_pic">Profile picture</string>
+    <string name="search_btn">Търси</string>
+    <string name="create_btn">Създай маршрут</string>
+    <string name="name">Име</string>
 
 </resources>
