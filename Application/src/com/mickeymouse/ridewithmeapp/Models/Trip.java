@@ -1,4 +1,4 @@
-package com.mickeymouse.ridewithmeapp;
+package com.mickeymouse.ridewithmeapp.Models;
 
 import java.util.ArrayList;
 import java.util.List;

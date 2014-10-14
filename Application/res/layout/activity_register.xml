@@ -26,7 +26,7 @@
             android:ems="10"
             android:hint="@string/reg_user"
             android:padding="10dp"
-            android:textColorHint="#0A5688" />
+            android:textColorHint="#93bad3" />
         
         <EditText
             android:id="@+id/etRegEmail"
@@ -38,7 +38,7 @@
             android:hint="@string/reg_email"
             android:inputType="textEmailAddress"
             android:padding="10dp"
-            android:textColorHint="#0A5688" />
+            android:textColorHint="#93bad3" />
         
         <EditText
             android:id="@+id/etRegPass"
@@ -49,7 +49,7 @@
             android:ems="10"
             android:hint="@string/reg_pass"
             android:padding="10dp"
-            android:textColorHint="#0A5688" />
+            android:textColorHint="#93bad3" />
         
         <EditText
             android:id="@+id/etRegConfPass"
@@ -60,7 +60,7 @@
             android:ems="10"
             android:hint="@string/reg_confPass"
             android:padding="10dp"
-            android:textColorHint="#0A5688" />
+            android:textColorHint="#93bad3" />
 
         <Button
             android:id="@+id/regBtn"

@@ -1,4 +1,4 @@
-package com.mickeymouse.ridewithmeapp;
+package com.mickeymouse.ridewithmeapp.Models;
 
 import com.telerik.everlive.sdk.core.model.base.DataItem;
 import com.telerik.everlive.sdk.core.serialization.ServerProperty;
