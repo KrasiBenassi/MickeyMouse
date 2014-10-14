@@ -14,5 +14,9 @@
     <string name="reg_btn">Регистрирай се</string>
     <string name="everlive_key">JXf8myCowKXQg50U</string>
     <string name="progress_login">Зареждане..</string>
+    <string name="profile_pic">Profile picture</string>
+    <string name="search_btn">Търси</string>
+    <string name="create_btn">Създай маршрут</string>
+    <string name="name">Име</string>
 
 </resources>
