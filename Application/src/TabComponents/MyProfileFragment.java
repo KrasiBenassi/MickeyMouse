@@ -14,5 +14,4 @@ public class MyProfileFragment extends Fragment {
 		View view = inflater.inflate(com.mickeymouse.ridewithmeapp.R.layout.activity_profile, container, false);
 		return view;
 	}
-	
 }

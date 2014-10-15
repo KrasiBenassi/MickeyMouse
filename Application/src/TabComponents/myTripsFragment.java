@@ -16,4 +16,5 @@ public class myTripsFragment extends Fragment {
 				false);
 		return view;
 	}
+	
 }
