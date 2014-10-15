@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RDm</string>
+    <string name="app_name">RDM - Trip Manager</string>
     <string name="action_settings">Регистрация</string>
     <string name="logo">Logo</string>
     <string name="user">Потребител</string>
