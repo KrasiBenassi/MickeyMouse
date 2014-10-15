@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.widget.Toast;
 
 import com.mickeymouse.ridewithmeapp.Activities.EntryActivity;
+import com.mickeymouse.ridewithmeapp.Activities.MainPageActivity;
 import com.mickeymouse.ridewithmeapp.Activities.RegisterActivity;
 import com.mickeymouse.ridewithmeapp.Models.LoggedUser;
 import com.telerik.everlive.sdk.core.EverliveApp;
@@ -40,7 +41,7 @@ public class LoginRequestResultCallbackAction extends RequestResultCallbackActio
                     progress.dismiss();
 
                     // create activity after login !! Remove that later! 
-                    Intent intent = new Intent(activity, RegisterActivity.class);
+                    Intent intent = new Intent(activity, MainPageActivity.class);
                     activity.startActivity(intent);
                 }
             });

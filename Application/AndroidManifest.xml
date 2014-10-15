@@ -31,6 +31,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name="com.mickeymouse.ridewithmeapp.Activities.MainPageActivity" >
+            <intent-filter>
+                <action android:name="com.mickeymouse.ridewithmeapp.Activities.MainPageActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

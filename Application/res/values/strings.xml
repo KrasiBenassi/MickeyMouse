@@ -20,4 +20,7 @@
     <string name="name">Име</string>
     <string name = "progress_register">Създаване на акаунт..</string>
     <string name = "register_onsucceed">Акаунта е създаден успешно!</string>
+    <string name = "tab_mytrips">My trips</string>
+    <string name = "tab_signedFor">Joined Trips</string>
+    <string name = "tab_profile">My Profile</string>
 </resources>
