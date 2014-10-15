@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.widget.Toast;
 
+import com.mickeymouse.ridewithmeapp.R;
 import com.mickeymouse.ridewithmeapp.Activities.EntryActivity;
 import com.mickeymouse.ridewithmeapp.Activities.MainPageActivity;
 import com.mickeymouse.ridewithmeapp.Activities.RegisterActivity;
@@ -48,12 +49,10 @@ public class LoginRequestResultCallbackAction extends RequestResultCallbackActio
         } else {
             progress.dismiss();
 
-            final String errorMessage = accessTokenRequestResult.getError().getMessage();
-
             this.activity.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                	 Toast.makeText(activity, errorMessage, Toast.LENGTH_SHORT);
+                	 Toast.makeText(activity, R.string.login_error, Toast.LENGTH_SHORT).show();
                 }
             });
         }

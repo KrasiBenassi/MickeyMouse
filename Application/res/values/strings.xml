@@ -29,4 +29,5 @@
     <string name = "tab_mytrips">My trips</string>
     <string name = "tab_signedFor">Joined Trips</string>
     <string name = "tab_profile">My Profile</string>
+    <string name = "login_error">Грешно въведено име или парола!</string>
 </resources>

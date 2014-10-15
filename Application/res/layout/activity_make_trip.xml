@@ -34,7 +34,7 @@
             android:background="@drawable/edit_top"
             android:layout_marginBottom="10dp"
             android:ems="10"
-            android:hint="@string/"
+            android:hint="@string/make_from"
             android:padding="10dp"
             android:textColorHint="#93bad3" />
         
