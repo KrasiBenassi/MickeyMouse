@@ -5,8 +5,8 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.widget.Toast;
 
-import com.mickeymouse.ridewithmeapp.EntryActivity;
-import com.mickeymouse.ridewithmeapp.RegisterActivity;
+import com.mickeymouse.ridewithmeapp.Activities.EntryActivity;
+import com.mickeymouse.ridewithmeapp.Activities.RegisterActivity;
 import com.mickeymouse.ridewithmeapp.Models.LoggedUser;
 import com.telerik.everlive.sdk.core.EverliveApp;
 import com.telerik.everlive.sdk.core.model.system.AccessToken;

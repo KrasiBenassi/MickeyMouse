@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">RDm</string>
     <string name="action_settings">Регистрация</string>
     <string name="logo">Logo</string>
     <string name="user">Потребител</string>
     <string name="password">Парола</string>
     <string name="submit_btn">Вход</string>
+    <string name="footer">Team MickeyMouse</string>
     <string name="reg_user">Потребителско име</string>
     <string name="reg_pass">Парола</string>
     <string name="reg_confPass">Повтори парола</string>
@@ -18,5 +18,6 @@
     <string name="search_btn">Търси</string>
     <string name="create_btn">Създай маршрут</string>
     <string name="name">Име</string>
-
+    <string name = "progress_register">Създаване на акаунт..</string>
+    <string name = "register_onsucceed">Акаунта е създаден успешно!</string>
 </resources>
