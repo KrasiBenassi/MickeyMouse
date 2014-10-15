@@ -17,6 +17,16 @@
         android:orientation="vertical"
         android:padding="10dp" >
         
+         <TextView
+           android:id="@+id/textView1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="20dp"
+           android:text="@string/create_btn"
+           android:textSize="30sp"
+           android:textColor="#0A5688"
+           android:textAppearance="?android:attr/textAppearanceLarge" />
+        
         <EditText
             android:id="@+id/etMakeFrom"
             android:layout_width="match_parent"
