@@ -1,21 +1,19 @@
 package com.mickeymouse.ridewithmeapp.Activities;
 
-import com.mickeymouse.ridewithmeapp.R;
-import com.mickeymouse.ridewithmeapp.R.layout;
-import com.mickeymouse.ridewithmeapp.Tasks.RegisterRequestResultCallbackAction;
-import com.telerik.everlive.sdk.core.EverliveApp;
-import com.telerik.everlive.sdk.core.model.system.User;
-import com.telerik.everlive.sdk.core.query.definition.UserSecretInfo;
-
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import android.support.v4.widget.SimpleCursorAdapter.ViewBinder;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.mickeymouse.ridewithmeapp.R;
+import com.mickeymouse.ridewithmeapp.Tasks.RegisterRequestResultCallbackAction;
+import com.telerik.everlive.sdk.core.EverliveApp;
+import com.telerik.everlive.sdk.core.model.system.User;
+import com.telerik.everlive.sdk.core.query.definition.UserSecretInfo;
 
 public class RegisterActivity extends Activity implements OnClickListener {
 
