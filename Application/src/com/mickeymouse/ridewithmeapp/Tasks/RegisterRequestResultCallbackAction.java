@@ -35,12 +35,10 @@ public class RegisterRequestResultCallbackAction extends RequestResultCallbackAc
                 }
             });
         } else {
-            final String errorMessage = requestResult.getError().getMessage();
-
             this.activity.runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                	Toast.makeText(activity, errorMessage, Toast.LENGTH_LONG).show();
+                	Toast.makeText(activity, com.mickeymouse.ridewithmeapp.R.string.register_error , Toast.LENGTH_LONG).show();
                 }
             });
         }

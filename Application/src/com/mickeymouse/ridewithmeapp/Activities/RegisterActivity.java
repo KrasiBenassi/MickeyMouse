@@ -48,25 +48,27 @@ public class RegisterActivity extends Activity implements OnClickListener {
 
 		if (usernameString.equals("") || passwordString.equals("")) {
 
-			Toast.makeText(this, "Невалидни данни!", Toast.LENGTH_SHORT);
+			Toast.makeText(this, "Невалидни данни!", Toast.LENGTH_SHORT).show();
 		}
 
-		if (passwordString != confirmPass) {
+		else if (!(passwordString.equals(confirmPass))) {
 			Toast.makeText(this, "Въвели сте различни пароли!",
-					Toast.LENGTH_SHORT);
+					Toast.LENGTH_SHORT).show();
 		}
+		else{
+			this.progress.setMessage(this.getResources().getString(
+					R.string.progress_register));
+			this.progress.show();
 
-		this.progress.setMessage(this.getResources().getString(
-				R.string.progress_register));
-		this.progress.show();
-
-		final User user = new User();
-		user.setUsername(usernameString);
-		user.setDisplayName(usernameString);
-		user.setEmail(emailString);
-		UserSecretInfo info = new UserSecretInfo();
-		info.setPassword(passwordString);
-		app.workWith().users().create(user, info).executeAsync(new RegisterRequestResultCallbackAction(this, this.progress));
+			final User user = new User();
+			user.setUsername(usernameString);
+			user.setDisplayName(usernameString);
+			user.setEmail(emailString);
+			UserSecretInfo info = new UserSecretInfo();
+			info.setPassword(passwordString);
+			app.workWith().users().create(user, info).executeAsync(new RegisterRequestResultCallbackAction(this, this.progress));
+		}
+		
 
 	}
 

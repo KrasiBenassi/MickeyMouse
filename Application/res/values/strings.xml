@@ -30,4 +30,5 @@
     <string name = "tab_signedFor">Joined Trips</string>
     <string name = "tab_profile">My Profile</string>
     <string name = "login_error">Грешно въведено име или парола!</string>
+    <string name = "register_error">Неуспешна регистрация!</string>
 </resources>
