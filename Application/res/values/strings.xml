@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">RDM - Trip Manager</string>
     <string name="action_settings">Регистрация</string>
     <string name="logo">Logo</string>
@@ -16,9 +17,14 @@
     <string name="progress_login">Зареждане..</string>
     <string name="profile_pic">Profile picture</string>
     <string name="edit_btn">Промени</string>
-     <string name="search_btn">Търси</string>
+    <string name="search_btn">Търси</string>
     <string name="create_btn">Създай маршрут</string>
+    <string name="make_from">От</string>
+    <string name="make_to">До</string>
+    <string name="make_date">Дата</string>
+    <string name="make_time">Час</string>
     <string name="name">Име</string>
-    <string name = "progress_register">Създаване на акаунт..</string>
-    <string name = "register_onsucceed">Акаунта е създаден успешно!</string>
+    <string name="progress_register">Създаване на акаунт..</string>
+    <string name="register_onsucceed">Акаунта е създаден успешно!</string>
+
 </resources>

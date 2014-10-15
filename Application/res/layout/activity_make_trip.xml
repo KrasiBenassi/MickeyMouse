@@ -1,8 +1,79 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical" >
-    
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:background="@drawable/gradient_demo"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp" >
+        
+        <EditText
+            android:id="@+id/etMakeFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_top"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/make_from"
+            android:padding="10dp"
+            android:textColorHint="#93bad3" />
+        
+        <EditText
+            android:id="@+id/etMakeTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_top"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/make_to"
+            android:padding="10dp"
+            android:textColorHint="#93bad3" />
+
+        <EditText
+            android:id="@+id/etMakeDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_top"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/make_date"
+            android:textColorHint="#93bad3"
+            android:inputType="date" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/etMakeTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_top"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="@string/make_time"
+            android:textColorHint="#93bad3"
+            android:inputType="time" />
+        
+        <Button
+            android:id="@+id/makeBtn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:background="@drawable/edit_top"
+            android:text="@string/create_btn"
+            android:textColor="#0A5688" />
+
+    </LinearLayout>
+
+</ScrollView>
