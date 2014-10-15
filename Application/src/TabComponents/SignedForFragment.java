@@ -16,5 +16,5 @@ public class SignedForFragment extends Fragment {
 		View view = inflater.inflate(R.layout.activity_signed_for_trips,
 				container, false);
 		return view;
-	}
+	} 
 }
