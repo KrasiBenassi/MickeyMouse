@@ -57,6 +57,7 @@ public class EntryActivity extends Activity implements View.OnClickListener {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.entry, menu);
 		return true;
+		
 	}
 
 	@Override
