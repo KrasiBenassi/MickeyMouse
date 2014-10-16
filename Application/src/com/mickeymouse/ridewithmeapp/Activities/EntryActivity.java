@@ -17,34 +17,57 @@ import com.telerik.everlive.sdk.core.EverliveApp;
 
 public class EntryActivity extends Activity implements View.OnClickListener {
 
-    private Button login;
-    private EditText user;
-    private EditText pass;
-    private ProgressDialog progress;
+	private Button login;
+	private EditText user;
+	private EditText pass;
+	private ProgressDialog progress;
+	private Button signUp;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_entry);
+		signUp = (Button) findViewById(R.id.btnSingUp);
 		login = (Button) findViewById(R.id.btnSingIn);
 		user = (EditText) findViewById(R.id.etUserName);
 		pass = (EditText) findViewById(R.id.etPass);
 		progress = new ProgressDialog(this);
 		login.setOnClickListener(this);
+		signUp.setOnClickListener(this);
 	}
-	
-    @Override
+
+	@Override
 	public void onClick(View v) {
-        this.progress.setMessage(this.getResources().getString(R.string.progress_login));
-        this.progress.show();
-        
-		String username = user.getText().toString();
-		String password = pass.getText().toString();
-		
-		DbManager manager = DbManager.GetInstance();
-		manager.SetDb();
-		manager.GetDb().workWith().authentication().login(username, password).executeAsync(new LoginRequestResultCallbackAction(this, this.progress));
+
+		switch (v.getId()) {
+		case R.id.btnSingIn: {
+			this.progress.setMessage(this.getResources().getString(
+					R.string.progress_login));
+			this.progress.show();
+
+			String username = user.getText().toString();
+			String password = pass.getText().toString();
+
+			DbManager manager = DbManager.GetInstance();
+			manager.SetDb();
+			manager.GetDb()
+					.workWith()
+					.authentication()
+					.login(username, password)
+					.executeAsync(
+							new LoginRequestResultCallbackAction(this,
+									this.progress));
+			break;
+		}
+		case R.id.btnSingUp: {
+			Intent register = new Intent(
+					"com.mickeymouse.ridewithmeapp.REGISTERACTIVITY");
+			startActivity(register);
+			break;
+		}
+		}
+
 	}
 
 	@Override
@@ -52,7 +75,7 @@ public class EntryActivity extends Activity implements View.OnClickListener {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.entry, menu);
 		return true;
-		
+
 	}
 
 	@Override
@@ -62,7 +85,8 @@ public class EntryActivity extends Activity implements View.OnClickListener {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
-			Intent register = new Intent("com.mickeymouse.ridewithmeapp.REGISTERACTIVITY");
+			Intent register = new Intent(
+					"com.mickeymouse.ridewithmeapp.REGISTERACTIVITY");
 			startActivity(register);
 			return true;
 		}

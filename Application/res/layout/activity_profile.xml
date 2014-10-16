@@ -21,7 +21,7 @@
             android:id="@+id/topic_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="35dp"
             android:text="@string/profile_topic"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#0A5688"
@@ -41,8 +41,9 @@
             android:layout_height="0dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:background="@drawable/edit_top"
+            android:textSize="20sp"
             android:ems="10"
+            android:gravity="center"
             android:padding="10dp"/>
 
         <TextView
@@ -51,8 +52,9 @@
             android:layout_height="0dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:background="@drawable/edit_top"
+             android:gravity="center"
             android:ems="10"
+            android:textSize="20sp"
             android:padding="10dp" />
     </LinearLayout>
 
