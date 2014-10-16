@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mickeymouse.ridewithmeapp.R;
 
@@ -34,33 +35,36 @@ public class MyProfileFragment extends Fragment {
 		TextView user = (TextView) view.findViewById(R.id.profName);
 		email.setText(emailString);
 		user.setText(userString);
-		//Intent intent = new Intent(getActivity(), ProfileActivity.class);
-		//startActivity(intent);
-		
+		// Intent intent = new Intent(getActivity(), ProfileActivity.class);
+		// startActivity(intent);
+
 		imgFavorite.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				open();
 			}
 		});
-	
 
 		return view;
 
 	}
-	
+
 	private void open() {
 		Intent intent = new Intent(
 				android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-		this.startActivityForResult(intent, 0);
+		this.startActivityForResult(intent, 1);
 	}
-	
+
 	@Override
 	public void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
-		Bitmap bp = (Bitmap) data.getExtras().get("data");
-		imgFavorite.setImageBitmap(bp);
 
+		if (resultCode == -1) {
+			Bitmap bp = (Bitmap) data.getExtras().get("data");
+			imgFavorite.setImageBitmap(bp);
+		} else {
+			Toast.makeText(getActivity(), "Не беше направена снимка", Toast.LENGTH_SHORT).show();
+		}
 	}
 }
