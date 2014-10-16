@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">RDM - Trip Manager</string>
     <string name="action_settings">Регистрация</string>
     <string name="logo">Logo</string>
+    <string name = "profile_topic">Моят Профил</string>
     <string name="user">Потребител</string>
     <string name="password">Парола</string>
     <string name="submit_btn">Вход</string>
@@ -26,9 +26,9 @@
     <string name="name">Име</string>
     <string name = "progress_register">Създаване на акаунт..</string>
     <string name = "register_onsucceed">Акаунта е създаден успешно!</string>
-    <string name = "tab_mytrips">My trips</string>
-    <string name = "tab_signedFor">Joined Trips</string>
-    <string name = "tab_profile">My Profile</string>
+    <string name = "tab_create_trip">Ново пътуване</string>
+    <string name = "tab_find_trip">Търсене</string>
+    <string name = "tab_profile">Профил</string>
     <string name = "login_error">Грешно въведено име или парола!</string>
     <string name = "register_error">Неуспешна регистрация!</string>
 </resources>

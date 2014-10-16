@@ -22,6 +22,7 @@ public class RegisterRequestResultCallbackAction extends RequestResultCallbackAc
 
     @Override
     public void invoke(RequestResult requestResult) {
+    	
         this.progressDialog.dismiss();
 
         if (requestResult.getSuccess()) {

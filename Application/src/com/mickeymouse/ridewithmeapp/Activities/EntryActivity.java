@@ -2,11 +2,8 @@ package com.mickeymouse.ridewithmeapp.Activities;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.widget.SimpleCursorAdapter.ViewBinder;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,16 +11,12 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.mickeymouse.ridewithmeapp.R;
-import com.mickeymouse.ridewithmeapp.R.id;
-import com.mickeymouse.ridewithmeapp.R.layout;
-import com.mickeymouse.ridewithmeapp.R.menu;
-import com.mickeymouse.ridewithmeapp.R.string;
+import com.mickeymouse.ridewithmeapp.DbComponents.DbManager;
 import com.mickeymouse.ridewithmeapp.Tasks.LoginRequestResultCallbackAction;
 import com.telerik.everlive.sdk.core.EverliveApp;
 
 public class EntryActivity extends Activity implements View.OnClickListener {
 
-	private EverliveApp myApp = new EverliveApp("JXf8myCowKXQg50U");
     private Button login;
     private EditText user;
     private EditText pass;
@@ -49,7 +42,9 @@ public class EntryActivity extends Activity implements View.OnClickListener {
 		String username = user.getText().toString();
 		String password = pass.getText().toString();
 		
-		myApp.workWith().authentication().login(username, password).executeAsync(new LoginRequestResultCallbackAction(this, this.progress));
+		DbManager manager = DbManager.GetInstance();
+		manager.SetDb();
+		manager.GetDb().workWith().authentication().login(username, password).executeAsync(new LoginRequestResultCallbackAction(this, this.progress));
 	}
 
 	@Override

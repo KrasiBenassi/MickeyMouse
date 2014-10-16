@@ -1,25 +1,34 @@
 package com.mickeymouse.ridewithmeapp.Activities;
 
+import TabComponents.CreateTripFragment;
 import TabComponents.MyProfileFragment;
-import TabComponents.SignedForFragment;
+import TabComponents.SearchForTripFragment;
 import TabComponents.TabListener;
-import TabComponents.myTripsFragment;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.mickeymouse.ridewithmeapp.R;
+import com.mickeymouse.ridewithmeapp.Models.LoggedUser;
+import com.telerik.everlive.sdk.core.model.system.User;
 
 public class MainPageActivity extends Activity {
 
-	private ActionBar.Tab myTripsTab;
-	private ActionBar.Tab signedForTab;
+	private ActionBar.Tab searchForTripTab;
+	private ActionBar.Tab createTripTab;
 	private ActionBar.Tab profileTab;
+	private ImageView imgFavorite;
 	
 	//fix with concrete classes for Fragment
-	Fragment mytripsFragment = new myTripsFragment();
-	Fragment signedForFragment = new SignedForFragment();
+	Fragment searchForTripFragment = new SearchForTripFragment();
+	Fragment createTripFragment = new CreateTripFragment();
 	Fragment profileTabFragment = new MyProfileFragment();
 	
 	
@@ -31,17 +40,16 @@ public class MainPageActivity extends Activity {
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
         setContentView(R.layout.activity_main_page);
         
-        myTripsTab = actionBar.newTab().setText(R.string.tab_mytrips);
-        signedForTab = actionBar.newTab().setText(R.string.tab_signedFor);
+        searchForTripTab = actionBar.newTab().setText(R.string.tab_find_trip);
+        createTripTab = actionBar.newTab().setText(R.string.tab_create_trip);
         profileTab = actionBar.newTab().setText(R.string.tab_profile);
         
-        myTripsTab.setTabListener(new TabListener(mytripsFragment));
-        signedForTab.setTabListener(new TabListener(signedForFragment));
+        searchForTripTab.setTabListener(new TabListener(searchForTripFragment));
+        createTripTab.setTabListener(new TabListener(createTripFragment));
         profileTab.setTabListener(new TabListener(profileTabFragment));
         
-        actionBar.addTab(myTripsTab);
-        actionBar.addTab(signedForTab);
+        actionBar.addTab(searchForTripTab);
+        actionBar.addTab(createTripTab);
         actionBar.addTab(profileTab);
 	}
-
 }

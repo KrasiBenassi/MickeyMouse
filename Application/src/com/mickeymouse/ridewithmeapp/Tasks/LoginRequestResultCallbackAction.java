@@ -6,56 +6,55 @@ import android.content.Intent;
 import android.widget.Toast;
 
 import com.mickeymouse.ridewithmeapp.R;
-import com.mickeymouse.ridewithmeapp.Activities.EntryActivity;
 import com.mickeymouse.ridewithmeapp.Activities.MainPageActivity;
-import com.mickeymouse.ridewithmeapp.Activities.RegisterActivity;
+import com.mickeymouse.ridewithmeapp.DbComponents.DbManager;
 import com.mickeymouse.ridewithmeapp.Models.LoggedUser;
-import com.telerik.everlive.sdk.core.EverliveApp;
 import com.telerik.everlive.sdk.core.model.system.AccessToken;
 import com.telerik.everlive.sdk.core.model.system.User;
 import com.telerik.everlive.sdk.core.result.RequestResult;
 import com.telerik.everlive.sdk.core.result.RequestResultCallbackAction;
 
-public class LoginRequestResultCallbackAction extends RequestResultCallbackAction<AccessToken>{
+public class LoginRequestResultCallbackAction extends
+		RequestResultCallbackAction<AccessToken> {
 
 	private Activity activity;
 	private ProgressDialog progress;
-	private EverliveApp app = new EverliveApp("JXf8myCowKXQg50U");
-	
-	public LoginRequestResultCallbackAction(Activity activity, ProgressDialog progress){
+
+	public LoginRequestResultCallbackAction(Activity activity,
+			ProgressDialog progress) {
 		this.activity = activity;
 		this.progress = progress;
 	}
-	
+
 	@Override
-    public void invoke(RequestResult<AccessToken> accessTokenRequestResult) {
+	public void invoke(RequestResult<AccessToken> accessTokenRequestResult) {
 
+		if (accessTokenRequestResult.getSuccess()) {
+			progress.dismiss();
+			RequestResult<User> user = DbManager.GetInstance().GetDb().workWith().users().getMe().executeSync();
+			User me = user.getValue();
+			LoggedUser.getInstance().setLoggedUser(me);
+			User user2 = LoggedUser.getInstance().getLoggedUser();
+			
+			this.activity.runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					
+					Intent intent = new Intent(activity, MainPageActivity.class);
+					activity.startActivity(intent);
+				}
+			});
 
-        if (accessTokenRequestResult.getSuccess()) {
-
-             app.workWith().users().getMe().executeAsync(new RequestResultCallbackAction() {
-                @Override
-                public void invoke(RequestResult requestResult) {
-                    User me = (User) requestResult.getValue();
-                    LoggedUser.getInstance().setLoggedUser(me);
-
-                    progress.dismiss();
-
-                    // create activity after login !! Remove that later! 
-                    Intent intent = new Intent(activity, MainPageActivity.class);
-                    activity.startActivity(intent);
-                }
-            });
-        } else {
-            progress.dismiss();
-
-            this.activity.runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                	 Toast.makeText(activity, R.string.login_error, Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
+		} else {
+			progress.dismiss();
+			this.activity.runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					Toast.makeText(activity, R.string.login_error,
+							Toast.LENGTH_SHORT).show();
+				}
+			});
+		}
 	}
-	
+
 }

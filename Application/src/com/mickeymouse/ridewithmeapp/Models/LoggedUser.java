@@ -8,7 +8,7 @@ import com.telerik.everlive.sdk.core.model.system.User;
 public class LoggedUser {
 
 	private static LoggedUser instance;
-	private User loggedUser;
+	private static User loggedUser;
 	private List myTrips;
 	private List tripsSignedFor;
 
@@ -22,7 +22,7 @@ public class LoggedUser {
     }
 
     public User getLoggedUser() {
-        return loggedUser;
+        return this.loggedUser;
     }
 
 

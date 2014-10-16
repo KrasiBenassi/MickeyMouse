@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 
 import com.mickeymouse.ridewithmeapp.R;
 
-public class myTripsFragment extends Fragment {
+public class SearchForTripFragment extends Fragment {
 
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {

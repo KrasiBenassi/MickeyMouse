@@ -68,8 +68,6 @@ public class RegisterActivity extends Activity implements OnClickListener {
 			info.setPassword(passwordString);
 			app.workWith().users().create(user, info).executeAsync(new RegisterRequestResultCallbackAction(this, this.progress));
 		}
-		
-
 	}
 
 }
