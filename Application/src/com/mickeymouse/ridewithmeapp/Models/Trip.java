@@ -3,6 +3,8 @@ package com.mickeymouse.ridewithmeapp.Models;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.R.string;
+
 import com.telerik.everlive.sdk.core.model.base.DataItem;
 import com.telerik.everlive.sdk.core.model.system.User;
 import com.telerik.everlive.sdk.core.serialization.ServerProperty;
@@ -32,6 +34,12 @@ public class Trip extends DataItem {
 	@ServerProperty("AreAnimalsAllowed")
 	private boolean areAnimalsAllowed;
 
+	@ServerProperty("Date")
+	private String date;
+
+	@ServerProperty("Time")
+	private String time;
+
 	@ServerProperty("UnoccupiedSeats")
 	private int unoccupiedSeats;
 
@@ -50,6 +58,22 @@ public class Trip extends DataItem {
 
 	public Town getDepartureTown() {
 		return this.from;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public String getDate() {
+		return this.date;
+	}
+
+	public String getTime() {
+		return this.time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
 	}
 
 	public void setDepartureTown(Town town) {

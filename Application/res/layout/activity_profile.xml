@@ -39,12 +39,11 @@
             android:id="@+id/profName"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="10dp"
             android:layout_weight="1"
-            android:textSize="20sp"
             android:ems="10"
             android:gravity="center"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/profEmail"
@@ -52,10 +51,30 @@
             android:layout_height="0dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"
-             android:gravity="center"
             android:ems="10"
-            android:textSize="20sp"
-            android:padding="10dp" />
+            android:gravity="center"
+            android:padding="10dp"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnMytrips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_btn"
+            android:padding="10dp"
+            android:text="@string/my_trips_btn"
+            android:textColor="#0A5688" />
+
+        <Button
+            android:id="@+id/btnJoinedtrips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_btn"
+            android:padding="10dp"
+            android:text="@string/joined_trips_btn"
+            android:textColor="#0A5688" />
     </LinearLayout>
 
 </ScrollView>

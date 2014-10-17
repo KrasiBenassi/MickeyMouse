@@ -32,4 +32,6 @@
     <string name = "tab_profile">Профил</string>
     <string name = "login_error">Грешно въведено име или парола!</string>
     <string name = "register_error">Неуспешна регистрация!</string>
+    <string name="my_trips_btn">Мои маршрути</string>
+    <string name = "joined_trips_btn">Присъединил съм се към..</string>
 </resources>
