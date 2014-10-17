@@ -17,32 +17,29 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.mickeymouse.ridewithmeapp.Activities.EntryActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name" android:theme="@style/AppBaseTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.mickeymouse.ridewithmeapp.Activities.RegisterActivity" >
+        <activity android:name="com.mickeymouse.ridewithmeapp.Activities.RegisterActivity"
+             android:theme="@style/AppBaseTheme" >
             <intent-filter>
                 <action android:name="com.mickeymouse.ridewithmeapp.REGISTERACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         
-        <activity android:name="com.mickeymouse.ridewithmeapp.Activities.MainPageActivity" >
+        <activity android:name="com.mickeymouse.ridewithmeapp.Activities.MainPageActivity" 
+             android:theme="@style/AppBaseTheme">
             <intent-filter>
                 <action android:name="com.mickeymouse.ridewithmeapp.Activities.MainPageActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         
-        <activity android:name="com.mickeymouse.ridewithmeapp.Activities.ProfileActivity" >
-            <intent-filter>
-                <action android:name="com.mickeymouse.ridewithmeapp.Activities.ProfileActivity" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+        
     </application>
 
 </manifest>
