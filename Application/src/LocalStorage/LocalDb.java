@@ -56,13 +56,13 @@ public class LocalDb extends SQLiteOpenHelper{
 		ContentValues newRow = new ContentValues();
 		newRow.put(KEY_DEP_TOWN, tripInfo.getDeparturePoint());
 		newRow.put(KEY_DEST_TOWN, tripInfo.getDestinationPoint());
-		newRow.put(KEY_HOST, tripInfo.getHost().getDisplayName());
+		newRow.put(KEY_HOST, tripInfo.getHost());
 		
 		StringBuilder builder = new StringBuilder();
-		List<User> signedPeople = tripInfo.getSignedPeople();
-		for(User user : signedPeople){
+		List<String> signedPeople = tripInfo.getSignedPeople();
+		for(String user : signedPeople){
 			//too lazy
-			builder.append(user.getDisplayName() + "|");
+			builder.append(user + "|");
 		}
 		newRow.put(KEY_SIGNED_PEOPLE, builder.toString());
 		newRow.put(KEY_TOTAL_SEATS, tripInfo.getTotalSeats());
@@ -82,18 +82,16 @@ public class LocalDb extends SQLiteOpenHelper{
 				currTrip.setDeparturePoint(cursor.getString(1));
 				currTrip.setDestinationPoint(cursor.getString(2));
 				
-				User curruser = new User();
-				curruser.setDisplayName(cursor.getString(3));
-				currTrip.setHost(curruser);
+				//User curruser = new User();
+				//curruser.setDisplayName(cursor.getString(3));
+				currTrip.setHost(cursor.getString(3));
 				
 				String signedPeople = cursor.getString(4);
 				String[] signedPeopleList = signedPeople.split("|");
-				List <User> retSignedUserList = currTrip.getSignedPeople();
+				List <String> retSignedUserList = currTrip.getSignedPeople();
 				
 				for(String signedPeopleListItem : signedPeopleList){
-					User signedUser = new User();
-					signedUser.setDisplayName(signedPeopleListItem);
-					retSignedUserList.add(signedUser);
+					retSignedUserList.add(signedPeopleListItem);
 				}
 				
 				currTrip.setTotalSeats(cursor.getInt(5));

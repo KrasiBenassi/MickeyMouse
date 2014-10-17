@@ -31,7 +31,7 @@ public class TripArrayAdapter extends ArrayAdapter<Trip> {
 		LayoutInflater inflater = ((Activity) context).getLayoutInflater();
 		View rowView = inflater.inflate(this.layoutId, parent);
 		TextView destination = (TextView) rowView.findViewById(R.id.list_item_destination);
-		destination.setText(trips.get(position).getDepartureTown() + " - " + trips.get(position).getDestinationTown());
+		destination.setText(trips.get(position).getDeparturePoint() + " - " + trips.get(position).getDestinationPoint());
 		TextView date = (TextView) rowView.findViewById(R.id.list_item_date);
 		date.setText(trips.get(position).getDate() + " - " + trips.get(position).getTime() + " часа");
 		return rowView;

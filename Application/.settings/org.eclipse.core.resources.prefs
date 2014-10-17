@@ -1,4 +1,8 @@
 eclipse.preferences.version=1
+encoding//src/SwipeTabComponents/CustomPagerAdapter.java=UTF-8
 encoding//src/com/mickeymouse/ridewithmeapp/Activities/EntryActivity.java=UTF-8
+encoding//src/com/mickeymouse/ridewithmeapp/Activities/JoinedTripsActivity.java=UTF-8
 encoding//src/com/mickeymouse/ridewithmeapp/Activities/RegisterActivity.java=UTF-8
+encoding//src/com/mickeymouse/ridewithmeapp/Activities/SearchedListActivity.java=UTF-8
+encoding//src/com/mickeymouse/ridewithmeapp/Tasks/CreateTripRequestResultCallbackAction.java=UTF-8
 encoding//src/com/mickeymouse/ridewithmeapp/Utils/TripArrayAdapter.java=UTF-8

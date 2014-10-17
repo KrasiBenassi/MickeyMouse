@@ -30,11 +30,11 @@ public class CustomPagerAdapter extends FragmentStatePagerAdapter{
 		//strings should be loaded from resource
 		switch(pos){
 		case 0:
-			return new String("Search for trip");
+			return new String("Търсене");
 		case 1:
-			return new String("Create trip");
+			return new String("Създай маршрут");
 		case 2:
-			return new String("My profile");
+			return new String("Моят профил");
 		}
 		
 		return null;
